@@ -1,2 +1,5 @@
--@images.each do |image|
-	%img{:src => image.url, :alt => "Picture", :title => "Picture"}
+-@images.each do |loc, img|
+	%h2=loc
+	-img.each do |image|
+		%a{:href => image.item_url} 
+			%img{:src => image.url, :alt => "Picture", :title => "Picture"}
